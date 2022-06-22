@@ -34,12 +34,11 @@ struct list {
     struct list* next;
 };
 
-int scanf_expression(char expression[256]);
-//int check_expression(char expression[256]);
-void parse_expression(char expression[256], struct list **head);
-void expression_handler(struct list **initial_list, struct list **resulting_stack);
-void calculate_expression(struct list **resulting_stack);
-
+int main_c(char *str, double value_of_x, double *result);
+int check_expression(char* str);
+int parse_expression(char expression[256], struct list **head, double value_of_x);
+int expression_handler(struct list **initial_list, struct list **resulting_stack);
+int calculate_expression(struct list **resulting_stack);
 
 struct list *create_node(double value, enum enum_type type, int priority);
 void unshift(struct list **head, double value, enum enum_type type, int priority);

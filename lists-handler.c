@@ -4,7 +4,6 @@
  * Вставляет элемент в начало списка
  */
 void unshift(struct list **head, double value, enum enum_type type, int priority) {
-    // TODO(maddiega): Обработать ситуацию, если new_node == NULL
     struct list *new_node = create_node(value, type, priority);
 
     if (*head == NULL) {
@@ -30,7 +29,6 @@ void shift(struct list **head) {
  * Вставляет элемент в конец списка
  */
 void push(struct list **head, double value, enum enum_type type, int priority) {
-    // TODO(maddiega): Обработать ситуацию, если new_node == NULL
     struct list *new_node = create_node(value, type, priority);
 
     if (*head == NULL) {
@@ -122,7 +120,6 @@ struct list *create_node(double value, enum enum_type type, int priority) {
         node->priority = priority;
         node->next = NULL;
     } else {
-        // TODO(maddiega): Обработать ситуацию, если malloc не выделил память
         fprintf(stderr, "something went wrong\n");
     }
 
